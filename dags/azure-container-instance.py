@@ -23,11 +23,11 @@ with DAG('azure_container_instances',
     opr_run_container = AzureContainerInstancesOperator(
         task_id='run_container',
         ci_conn_id='azure_container_conn_id',
-        registry_conn_id=None,
-        resource_group='adf-tutorial',
-        name='astrotutorial',
-        image='hello-world:latest',
-        region='East US',
+        registry_conn_id='d049794a-2634-4d28-929b-5bd16716eb53',
+        resource_group='CTO-ProtoLab-VideoAnalytics',
+        name='astroairflow',
+        image='flaskdemo.azurecr.io/flaskdemokunal:v1',
+        region='Central India',
         fail_if_exists=False
 
     )
