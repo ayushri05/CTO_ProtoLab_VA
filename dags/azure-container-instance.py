@@ -23,9 +23,9 @@ with DAG('azure_container_instances',
     opr_run_container = AzureContainerInstancesOperator(
         task_id='run_container',
         ci_conn_id='azure_container_conn_id',
-        registry_conn_id=None,
+        registry_conn_id= 'azure_container_registry',
         resource_group='CTO-ProtoLab-VideoAnalytics',
-        name='astroairflow',
+        name='airflowcont',
         image='flaskdemo.azurecr.io/flaskdemokunal:v1',
         region='Central India',
         fail_if_exists=False
